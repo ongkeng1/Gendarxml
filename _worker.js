@@ -1,4 +1,4 @@
-// worker.js
+// worker.jsp
 import { connect } from "cloudflare:sockets";
 
 var listProxy = [
