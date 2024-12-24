@@ -1,11 +1,9 @@
+const servervless = 'gendarbot.ari-andikha.web.id';
+const servertrojan = 'gendarbot.ari-andikha.web.id';
+const serverwildcard = 'gendarbot.ari-andikha.web.id';
+const passuid = '6ac83a31-453a-45a3-b01d-1bd20ee9101f';
 const TELEGRAM_BOT_TOKEN = '7961283450:AAGvj_tjUn4kGwQzruOepP-3S32uTqpoKto';
 const telegramApiUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/`;
-
-const IP_SERVER = '123.456.789.101'; // Ganti dengan IP server Anda
-const PORT_VLESS = '443'; // Port untuk VLESS
-const PORT_TROJAN = '443'; // Port untuk Trojan
-const UUID_DEFAULT = '6ac83a31-453a-45a3-b01d-1bd20ee9101f'; // UUID default
-const DOMAIN = 'example.com'; // Ganti dengan domain Anda
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -43,18 +41,15 @@ async function handleRequest(request) {
 Akun berhasil dibuat:
 
 **VLESS**
-IP: ${IP_SERVER}
-Port: ${PORT_VLESS}
-UUID: ${UUID_DEFAULT}
-Path: /vless
-Domain: ${DOMAIN}
+Server: ${servervless}
+Port: 443
+UUID: ${passuid}
 Masa Aktif: ${days} hari
 
 **Trojan**
-IP: ${IP_SERVER}
-Port: ${PORT_TROJAN}
-Password: ${UUID_DEFAULT}
-Domain: ${DOMAIN}
+Server: ${servertrojan}
+Port: 443
+Password: ${passuid}
 Masa Aktif: ${days} hari
         `.trim();
 
@@ -73,7 +68,7 @@ function createAccount(username, days) {
 
   return {
     username: username,
-    uuid: UUID_DEFAULT,
+    uuid: passuid,
     expiry: expiryDate.toISOString(),
   };
 }
