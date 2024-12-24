@@ -1,5 +1,5 @@
-const servervless = 'VLESSSERVER'gendarbot.ari-andikha.web.id;
-const servertrojan = 'TROJANSERVER'gendarbot.ari-andikha.web.id;
+const servervless = 'VLESSSERVER'vless.ari-andikha.web.id;
+const servertrojan = 'TROJANSERVER'trojan.ari-andikha.web.id;
 const serverwildcard = 'WILDCARDDOMAIN'gendarbot.ari-andikha.web.id;
 const passuid = 'GENDAR-ORIGIN-BOT';
 const TELEGRAM_BOT_TOKEN = 'YOURBOTTOKEN'7685185415:AAHR2zYQhMmEy-US0xOnqXjS4TTrPKd2WJU;
